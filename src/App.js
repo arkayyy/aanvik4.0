@@ -10,6 +10,7 @@ import Footer from './footer'
 import HelpIcon from '@material-ui/icons/Help';
 import {Box,Button} from '@material-ui/core'
 import NavigationIcon from '@material-ui/icons/Navigation';
+import {Modal} from './Modal'
 
 // const Bg=lazy(()=>import("./bg"))
 // const Particles=lazy(()=>import("./Particles"))
@@ -22,7 +23,7 @@ function App() {let root=document.documentElement;
 
 const [open,setOpen]=useState(false);
 
-
+const [modalopen,setmodalopen]=useState(false);
 window.addEventListener("click",()=>{
 if(open==true)
 {
@@ -72,8 +73,15 @@ useEffect(()=>{
       {/* <Bg/> */}
       
       <div className="particlewrapper"><Particles/></div>
+
       <Logo/>
       <Intro/>
+      
+      
+
+      
+      
+
 
       <div className="cardwrapper">
       <Cards/>
@@ -81,7 +89,9 @@ useEffect(()=>{
       {/* </Suspense> */}
       <div className="suppinfo" style={{position:"fixed",color:"green",right:"0",zIndex:"10000000000"}}>
         <div className="supptext">
-          <h2>Contact</h2>
+          <h3>Contact</h3>
+          <p>Rajarshi: 8584854152</p>
+          <p>Keshav: 6393352592</p>
         </div>
       </div>
       <NavigationIcon className="suppicon" id="navbtn" style={{zoom:"2.15",position:"fixed",bottom:"8",zIndex:"100000",right:"35"}} onClick={function(){

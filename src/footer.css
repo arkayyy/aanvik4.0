@@ -1,6 +1,6 @@
 .footer__body {
-  background-color: grey;
-  height: 27vh; /*woh black part hatane ki koshish kar rahi hoon*/
+  background-color:black;
+  height: 29vh; /*woh black part hatane ki koshish kar rahi hoon*/
   width: 100%;
   position: absolute;
   bottom: 0;
@@ -99,5 +99,34 @@
 @media only screen and (max-width: 450px) {
   .navList ul li a{
     zoom:0.6 !important;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .navList ul li{
+    margin: 10px 12px;
+    margin-top: 20px;
+    
+  }
+  .navList{
+    margin-left:-10px ;
+  }
+  .navList ul li a{
+    zoom:0.6;
+  }
+}
+
+
+@media only screen and (max-width: 380px) {
+  .navList ul li{
+    margin: 10px 12px;
+    margin-top: 20px;
+    
+  }
+  .navList{
+    margin-left:-10px ;
+  }
+  .navList ul li a{
+    zoom:0.6;
   }
 }

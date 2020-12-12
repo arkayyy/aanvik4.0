@@ -1,7 +1,10 @@
-import React from 'react'
+import { Modal } from '@material-ui/core';
+import React,{useState} from 'react'
 import './logo.css'
 
-function Logo() {let root=document.documentElement;
+
+function Logo() {
+    let root=document.documentElement;
     window.addEventListener("scroll",()=>{var h=window.innerHeight;
         //console.log(window.scrollY)
         root.style.setProperty("--scwidth",((((window.scrollY)/h)*100*0.55).toString()+"%"));
@@ -33,6 +36,8 @@ function Logo() {let root=document.documentElement;
             <div className="progressbar" style={{zIndex:"1000000"}}></div>
             <img className="TEC_logo" style={{zIndex:"10000",marginLeft:"30px",marginTop:"20px",width:"100px"}} src="https://i.ibb.co/LJj8W49/teclogo-1.png" alt=""/>
             <img className="TEC_logo1" style={{zIndex:"10000",marginLeft:"30px",marginTop:"20px",width:"100px"}} src="https://i.ibb.co/bg3gXD2/image.png" alt=""/>
+           
+            
         </div>
     )
 }

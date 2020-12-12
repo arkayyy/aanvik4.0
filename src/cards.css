@@ -16,21 +16,29 @@
 
 .proj1 {
  background-image: url("https://i.ibb.co/FWTH3Kz/1.jpg");
+ 
  background-size: cover;
 
   
  height: 85px !important;
 }
+
+.startbtn{
+  color: #42bd45;
+}
+
 .proj2 {
-  background-image: url("https://i.ibb.co/1bRzsCH/2.jpg");
+  /* background-image: url("https://i.ibb.co/1bRzsCH/2.jpg"); */
+  background-image: url("https://www.edureka.co/blog/wp-content/uploads/2018/08/Object-Detection-in-Tensorflow-1.png");
   background-size: cover;
  
    
   height: 85px !important;
  }
  .proj3 {
-  background-image: url("https://i.ibb.co/FWTH3Kz/1.jpg");
+  background-image: url("https://forum.mysensors.org/uploads/upload-aacf9418-0c17-417b-b340-0ce5026a8ba0.jpg");
   background-size: cover;
+  background-position: center;
  
    
   height: 85px !important;
@@ -186,6 +194,8 @@ display: none !important;
   font-weight: 300;
 }
 
+.startbtnP{}
+
 .content a {
   position: relative;
   display: inline-block;
@@ -214,6 +224,7 @@ display: none !important;
 
 .livebtn {
   box-shadow: -10px -10px 15px #edeff1, 7px 10px 20px 20px #cacfd8;
+  transition: ease all 0.5s;
 }
 
 .livebtn:hover {
@@ -254,7 +265,10 @@ display: none !important;
   animation: arrowdown 0.45s ease-in-out infinite; margin-right:8px;
 }
 
-
+.bluricon{
+  animation: arrowdown 4s ease-in-out infinite;
+  margin-top:-10px;
+}
 
 @keyframes arrowdown {
   0% {
@@ -295,3 +309,14 @@ display: none !important;
   margin-top: 0;
 }
 }
+
+@media only screen and (max-width: 380px) {
+  .livebtn{
+    zoom:0.6;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  .whitetitle{font-size: 15px;}
+}
+

@@ -1,10 +1,12 @@
-import React ,{ useEffect, useRef } from 'react'
+import React ,{ useEffect, useRef,useState } from 'react'
 import ReactDOM from 'react-dom';
 import './cards.css' 
 import YouTubeIcon from '@material-ui/icons/YouTube'; 
 import Footer from './footer'
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore"
 import DuoIcon from '@material-ui/icons/Duo';
+import BlurOnRoundedIcon from '@material-ui/icons/BlurOnRounded';
+import CancelIcon from '@material-ui/icons/Cancel';
 
 // import Tilt from 'react-vanilla-tilt'
 import VanillaTilt from 'vanilla-tilt';
@@ -21,7 +23,7 @@ function Tilt(props) {
 
 
 
-function Cards() {
+function Cards() {const [modalopen,setmodalopen]=useState(false);
     let root=document.documentElement;
     window.addEventListener("scroll",()=>{
         console.log(window.scrollY)
@@ -56,8 +58,16 @@ function Cards() {
 
     return (
         <div className="container" id="container">
+            {(modalopen) ? <div className="modal__body" style={{display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",position:"fixed",top:"0",height:"70%",width:"70%",background: "rgba(255, 255, 255, 0.1)",marginTop:"130px",zIndex:"99999999999",backdropFilter:"blur(25px)",opacity:"1",borderRadius:"10px",  boxShadow: "20px 20px 50px rgba(0, 0, 0, 0.5)",  borderTop: "1px solid rgba(255, 255, 255, 0.5)",
+  borderLeft:"1px solid rgba(255, 255, 255, 0.5)"}}>
+      <CancelIcon style={{color:"white",marginTop:"-50px",marginBottom:"40px",cursor:"pointer"}} onClick={()=>setmodalopen(false)}/>
+<h1 style={{color:"black",fontFamily:"Poppins,sans-serif",marginTop:"-30px",marginBottom:"15px"}}>Hey, we are waiting too!</h1>
+<BlurOnRoundedIcon className="bluricon" style={{color:"grey",width:"40%",height:"50%",marginBottom:"10px"}}/>
+<h2 style={{color:"black",marginBottom:"-30px"}}>The Project Live Demos are yet to <span className="startbtn">START >>></span></h2>
+        
+      </div> : <h2 style={{color:"white"}}></h2>}
  
-            <h2 className="whitetitle" style={{fontFamily:"Poppins,sans-serif"}}>Take a peek at our projects...</h2>
+            <h2 className="whitetitle" id="whitetitle" style={{fontFamily:"Poppins,sans-serif"}}>Take a peek at our projects...</h2>
 <div className="cardcon1"> 
 
  
@@ -83,11 +93,13 @@ className="tilter"  style={{height:"330px"}}> */}
                 <div className="content" > 
                   
                 
-                    
+                    <h1>01</h1>
 
                     <h2 className="x">Real time Handwritten digit recognition</h2>
                     
-                    <a href="#" style={{}}>Go to Live Demo!</a>
+                    <a href="#" style={{}} onClick={()=>setmodalopen(!modalopen)}>Go to Live Demo!</a>
+
+                    
 
                 </div>
             </div>
@@ -100,10 +112,10 @@ className="tilter"  style={{height:"330px"}}> */}
 
                 <div className="proj2" style={{ zIndex: "100000",width:"100%",height:"100%"}}></div>
                 <div className="content">
-                    
+                    <h1>02</h1>
                     <h2>Object detection using Computer Vision</h2>
                     
-                    <a href="#">Go to Live Demo!</a>
+                    <a href="#" onClick={()=>setmodalopen(!modalopen)}>Go to Live Demo!</a>
 
                 </div>
             </div>
@@ -116,9 +128,10 @@ className="tilter"  style={{height:"330px"}}> */}
 
             <div className="proj3" style={{ zIndex: "100000",width:"100%",height:"100%"}}></div>
                 <div className="content">
+                    <h1>03</h1>
                     <h2>Bidirectional person counter using IR sensor</h2>
                     <p className="onelineintro">One Line intro</p>
-                    <a href="#">Go to Live Demo!</a>
+                    <a href="#" onClick={()=>setmodalopen(!modalopen)}>Go to Live Demo!</a>
 
                 </div>
             </div>
@@ -135,10 +148,10 @@ className="tilter"  style={{height:"330px"}}> */}
             <div className="proj4" style={{ zIndex: "100000",width:"100%",height:"100%"}}></div>
 
                 <div className="content">
-                  
+                  <h1>04</h1>
                     <h2 style={{marginTop:"14px"}}>Temperature and Humidity measurement using DHT sensor </h2>
                     
-                    <a href="#" style={{marginTop:"0px"}}>Go to Live Demo!</a>
+                    <a href="#" style={{marginTop:"0px"}} onClick={()=>setmodalopen(!modalopen)}>Go to Live Demo!</a>
 
                 </div>
                 
@@ -154,10 +167,10 @@ className="tilter"  style={{height:"330px"}}> */}
             <div className="proj5" style={{ zIndex: "100000",width:"100%",height:"100%"}}></div>
 
                 <div className="content">
-                    
+                    <h1>05</h1>
                     <h2 style={{marginTop:"14px"}}>Detection of UID from nanotechnology based RFID tags </h2>
                     
-                    <a href="#" style={{marginTop:"0px"}}>Go to Live Demo!</a>
+                    <a href="#" style={{marginTop:"0px"}} onClick={()=>setmodalopen(!modalopen)}>Go to Live Demo!</a>
 
                 </div>
             </div>
@@ -168,7 +181,7 @@ className="tilter"  style={{height:"330px"}}> */}
             </div>
             {/* <ExpandMoreIcon className="arrowdown1" style={{color:"black",zoom:"3",bottom:"0",zIndex:"10000",marginTop:"10px",backgroundColor:"none"}} onClick={function(){
            document.getElementById("footer__body").scrollIntoView({behavior:"smooth"})}}/> */}
-            <a className="livebtn" href="https://youtube.com" style={{display:"flex",flexDirection:"row",padding:"20px",backgroundColor:"red",textDecoration:"none",color:"white",fontFamily:"Poppins,sans-serif",marginTop:"70px",borderRadius:"20px",alignItems:"center",justifyContent:"center"}}><YouTubeIcon className="yticon" style={{padding:"0px",marginTop:"0px",zoom:"1.2"}}/>         Join our livestream on YouTube!</a>
+            <a className="livebtn" href="https://youtube.com" style={{display:"flex",flexDirection:"row",padding:"20px",backgroundColor:"red",textDecoration:"none",color:"white",fontFamily:"Poppins,sans-serif",marginTop:"70px",borderRadius:"20px",alignItems:"center",justifyContent:"center"}}><YouTubeIcon  className="yticon" style={{padding:"0px",marginTop:"0px",zoom:"1.2"}} onClick={()=>setmodalopen(true)}/>         Join our livestream on YouTube!</a>
             
             
             <Footer/>

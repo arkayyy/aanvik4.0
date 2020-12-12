@@ -15,7 +15,7 @@
   pointer-events: none;
 }
 #navbtn{
-  
+
   display:var(--navdisp);
 }
 #navbtn:hover{
@@ -44,6 +44,11 @@ color:#42bd45;
 
 .App-link {
   color: #61dafb;
+}
+
+.modal__body{
+  height: 50px;
+  background-color: white;
 }
 
 @keyframes App-logo-spin {
@@ -242,3 +247,57 @@ display: var(--suppdisp);
                               margin-bottom:40px !important;
                             }
                           }
+
+                          @media only screen and (max-width: 480px) {
+                            .suppicon{
+                              zoom:1.3 !important;
+                              margin-bottom:40px ;
+                            }
+                            #navbtn{position: absolute;
+                              margin-right:5px;
+                              margin-bottom: 70px !important;
+                            }
+                            .suppinfo{
+                              margin-bottom: 22% !important;
+                                                          }
+                          }
+
+                          @media only screen and (max-width: 430px) {
+                            .suppinfo{
+margin-bottom: 24% !important;
+                            }
+                          }
+                          @media only screen and (max-width: 400px) {
+                            .suppinfo{
+margin-bottom: 26% !important;
+                            }
+                          }
+                          @media only screen and (max-width: 375px) {
+                            .suppinfo{
+margin-bottom: 27.5% !important;
+                            }
+                          }
+                          @media only screen and (max-width: 358px) {
+                            .suppinfo{
+margin-bottom: 29% !important;
+                            }
+                          }
+
+                          @media only screen and (max-width: 340px) {
+                            .suppinfo{
+margin-bottom: 31% !important;
+                            }
+                          }
+
+                          @media only screen and (max-width: 315px) {
+                            .suppinfo{
+                              margin-bottom: 33% !important;
+                                                          }
+                          }
+
+                          @media only screen and (max-width: 300px) {
+                            .suppinfo{
+                              margin-bottom: 34% !important;
+                                                          }
+                          }
+                          
