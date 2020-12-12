@@ -1,7 +1,7 @@
 import React,{Component,lazy,Suspense,useEffect,useState} from 'react'
 import './App.css';
 import Bg from './bg'
-import Particles from './Particles'
+// import Particles from './Particles'
 import Cards from './cards'
 import Logo from './logo'
 import Loading from './loading'
@@ -71,7 +71,7 @@ useEffect(()=>{
       
       {/* <Bg/> */}
       
-      <div className="particlewrapper"><Particles/></div>
+      {/* <div className="particlewrapper"><Particles/></div> */}
       <Logo/>
       <Intro/>
 

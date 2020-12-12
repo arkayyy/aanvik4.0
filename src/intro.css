@@ -84,11 +84,11 @@
 }
 
 .linkcontents:hover {
-  color: white;
-  background: #42bd45;
+  color:#42bd45 !important;
+  background: white;
   transition-delay: 1s;
-
-  box-shadow: 0 0 10px #42bd45, 0 0 40px #42bd45, 0 0 10px #42bd45;
+  border:solid 2px white;
+  letter-spacing: 5px;
 }
 .linkcontents span {
   position: absolute;
