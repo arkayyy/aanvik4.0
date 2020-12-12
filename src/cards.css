@@ -53,14 +53,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   flex-direction: column;
   position: absolute;
-
   z-index: 1000;
   margin-top: 0px;
   background-color: #ededed;
-  height: 185vh;
+  min-height: 185vh;
 }
 
 .container::before {
@@ -219,7 +217,7 @@ display: none !important;
   transform: scale(1.08);
 }
 .whitetitle {
-  margin-top: -250px;
+  margin-top: -220px;
 }
 .arrowdown1{
   padding: 0px;
