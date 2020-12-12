@@ -1,14 +1,22 @@
 :root{
   --opacitycont:1;
 }
-
-.intro {
-  height: 100vh;
+.intro{
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
   flex-direction: column;
+  top:0;
+  align-items:center;
+  justify-content: center;
+  width: 100vw;
+  height:100vh;
+  text-align:center;
+  color:white;
+}
+#particles-js{
+  width:100vw;
+  height:100vh;
+  position:absolute;
+  top:0;
 }
 .aanviklogo {
   position: absolute;
